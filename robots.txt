@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /assets/tmp/
+
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&from
+
+Sitemap: https://egi411.github.io/garazh-42/sitemap.xml
+Host: garazh42.ru
