@@ -74,9 +74,9 @@ const LEGAL = { entity: "", inn: "", ogrn: "", legalAddress: "", email: "" };
     each('script[type="application/ld+json"]', function (node) {
       var data;
       try { data = JSON.parse(node.textContent); } catch (e) { return; }
-      var graph = data['@graph'];
-      if (!graph) return;
-      var org = graph.filter(function (n) { return /#organization$/.test(n['@id'] || ''); })[0];
+      // Узлы лежат плоскими блоками; @graph поддерживаем на случай старой разметки.
+      var nodes = data['@graph'] || [data];
+      var org = nodes.filter(function (n) { return /#organization$/.test(n['@id'] || '') && /Organization|AutoRepair|LocalBusiness/.test([].concat(n['@type'] || []).join(' ')); })[0];
       if (!org) return;
       if (socialUrls.length) org.sameAs = socialUrls.map(function (s) { return s.url; });
       if (tel) org.telephone = tel;

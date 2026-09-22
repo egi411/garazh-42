@@ -630,80 +630,103 @@
   </div>
 </aside>
 
+<!-- Организация: бренд, логотип, профили. Отдельным плоским блоком —
+     часть SEO-аудиторов не разворачивает @graph и не видит вложенные узлы. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["AutoRepair", "Organization"],
-      "@id": "https://egi411.github.io/garazh-42/#organization",
-      "name": "Гараж 42",
-      "alternateName": "Автосервис «Гараж 42», Казань",
-      "description": "Автосервис в Казани: слесарный ремонт, техобслуживание и диагностика легковых автомобилей. Цены на работы опубликованы открытым прайсом, сумма фиксируется в заказ-наряде до начала работ.",
-      "url": "https://egi411.github.io/garazh-42/",
-      "logo": { "@id": "https://egi411.github.io/garazh-42/#logo" },
-      "image": [{ "@id": "https://egi411.github.io/garazh-42/#primaryimage" }, { "@id": "https://egi411.github.io/garazh-42/#logo" }],
-      "priceRange": "₽₽",
-      "currenciesAccepted": "RUB",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Казань",
-        "addressRegion": "Республика Татарстан",
-        "addressCountry": "RU"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Казань" },
-        { "@type": "AdministrativeArea", "name": "Республика Татарстан" }
-      ],
-      "knowsLanguage": "ru"
-    },
-    {
-      "@type": "ImageObject",
-      "@id": "https://egi411.github.io/garazh-42/#logo",
-      "url": "https://egi411.github.io/garazh-42/assets/img/logo.png",
-      "contentUrl": "https://egi411.github.io/garazh-42/assets/img/logo.png",
-      "width": 512,
-      "height": 512,
-      "caption": "Гараж 42 — автосервис в Казани"
-    },
-    {
-      "@type": "ImageObject",
-      "@id": "https://egi411.github.io/garazh-42/#primaryimage",
-      "url": "https://egi411.github.io/garazh-42/assets/img/og.jpg",
-      "contentUrl": "https://egi411.github.io/garazh-42/assets/img/og.jpg",
-      "width": 1200,
-      "height": 630,
-      "caption": "Гараж 42 — автосервис в Казани: слесарный ремонт и ТО"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://egi411.github.io/garazh-42/#website",
-      "url": "https://egi411.github.io/garazh-42/",
-      "name": "Гараж 42 — автосервис в Казани",
-      "description": "Слесарный ремонт, ТО и диагностика легковых автомобилей в Казани по открытому прайсу.",
-      "inLanguage": "ru-RU",
-      "publisher": { "@id": "https://egi411.github.io/garazh-42/#organization" },
-      "copyrightHolder": { "@id": "https://egi411.github.io/garazh-42/#organization" }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://egi411.github.io/garazh-42/#webpage",
-      "url": "https://egi411.github.io/garazh-42/",
-      "name": "Автосервис в Казани — ремонт и ТО по прайсу | Гараж 42",
-      "description": "Слесарный ремонт, ТО и диагностика в Казани. Цены на работы — открытой таблицей. Сумму фиксируем до начала работ, добавки — только с вашего согласия.",
-      "inLanguage": "ru-RU",
-      "isPartOf": { "@id": "https://egi411.github.io/garazh-42/#website" },
-      "about": { "@id": "https://egi411.github.io/garazh-42/#organization" },
-      "mainEntity": { "@id": "https://egi411.github.io/garazh-42/#organization" },
-      "primaryImageOfPage": { "@id": "https://egi411.github.io/garazh-42/#primaryimage" },
-      "author": { "@id": "https://egi411.github.io/garazh-42/#organization" },
-      "publisher": { "@id": "https://egi411.github.io/garazh-42/#organization" },
-      "copyrightHolder": { "@id": "https://egi411.github.io/garazh-42/#organization" },
-      "copyrightYear": 2026,
-      "datePublished": "2026-09-22",
-      "dateModified": "2026-09-22"
-    }
-  ]
+  "@type": "Organization",
+  "@id": "https://egi411.github.io/garazh-42/#organization",
+  "name": "Гараж 42",
+  "alternateName": "Автосервис «Гараж 42», Казань",
+  "description": "Автосервис в Казани: слесарный ремонт, техобслуживание и диагностика легковых автомобилей. Цены на работы опубликованы открытым прайсом, сумма фиксируется в заказ-наряде до начала работ.",
+  "url": "https://egi411.github.io/garazh-42/",
+  "logo": {
+    "@type": "ImageObject",
+    "@id": "https://egi411.github.io/garazh-42/#logo",
+    "url": "https://egi411.github.io/garazh-42/assets/img/logo.png",
+    "contentUrl": "https://egi411.github.io/garazh-42/assets/img/logo.png",
+    "width": 512,
+    "height": 512,
+    "caption": "Гараж 42 — автосервис в Казани"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "@id": "https://egi411.github.io/garazh-42/#primaryimage",
+    "url": "https://egi411.github.io/garazh-42/assets/img/og.jpg",
+    "contentUrl": "https://egi411.github.io/garazh-42/assets/img/og.jpg",
+    "width": 1200,
+    "height": 630,
+    "caption": "Гараж 42 — автосервис в Казани: слесарный ремонт и ТО"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Казань" },
+    { "@type": "AdministrativeArea", "name": "Республика Татарстан" }
+  ],
+  "knowsLanguage": "ru"
+}
+</script>
+
+<!-- Локальный бизнес: тот же @id, что у организации, — по JSON-LD это один узел
+     с двумя типами, а плоский "@type" виден любому парсеру. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "@id": "https://egi411.github.io/garazh-42/#organization",
+  "name": "Гараж 42",
+  "url": "https://egi411.github.io/garazh-42/",
+  "image": { "@id": "https://egi411.github.io/garazh-42/#primaryimage" },
+  "logo": { "@id": "https://egi411.github.io/garazh-42/#logo" },
+  "priceRange": "₽₽",
+  "currenciesAccepted": "RUB",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Казань",
+    "addressRegion": "Республика Татарстан",
+    "addressCountry": "RU"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Казань" },
+    { "@type": "AdministrativeArea", "name": "Республика Татарстан" }
+  ],
+  "knowsLanguage": "ru"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://egi411.github.io/garazh-42/#website",
+  "url": "https://egi411.github.io/garazh-42/",
+  "name": "Гараж 42 — автосервис в Казани",
+  "description": "Слесарный ремонт, ТО и диагностика легковых автомобилей в Казани по открытому прайсу.",
+  "inLanguage": "ru-RU",
+  "publisher": { "@id": "https://egi411.github.io/garazh-42/#organization" },
+  "copyrightHolder": { "@id": "https://egi411.github.io/garazh-42/#organization" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://egi411.github.io/garazh-42/#webpage",
+  "url": "https://egi411.github.io/garazh-42/",
+  "name": "Автосервис в Казани — ремонт и ТО по прайсу | Гараж 42",
+  "description": "Слесарный ремонт, ТО и диагностика в Казани. Цены на работы — открытой таблицей. Сумму фиксируем до начала работ, добавки — только с вашего согласия.",
+  "inLanguage": "ru-RU",
+  "isPartOf": { "@id": "https://egi411.github.io/garazh-42/#website" },
+  "about": { "@id": "https://egi411.github.io/garazh-42/#organization" },
+  "mainEntity": { "@id": "https://egi411.github.io/garazh-42/#organization" },
+  "primaryImageOfPage": { "@id": "https://egi411.github.io/garazh-42/#primaryimage" },
+  "author": { "@id": "https://egi411.github.io/garazh-42/#organization" },
+  "publisher": { "@id": "https://egi411.github.io/garazh-42/#organization" },
+  "copyrightHolder": { "@id": "https://egi411.github.io/garazh-42/#organization" },
+  "copyrightYear": 2026,
+  "datePublished": "2026-09-22",
+  "dateModified": "2026-09-22"
 }
 </script>
 
